@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Leah Meirinhos French Tutor",
   "main": "index.js",
-  "dependencies": {
-    "stripe": "^8.139.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "sass": "^1.32.8"
   },
