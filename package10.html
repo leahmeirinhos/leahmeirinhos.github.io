@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Leah Meirinhos French Tutor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<section id="header">
+			<header>
+				<span class="image avatar"><img src="images/avatar.jpeg" alt="" /></span>
+				<h1 id="logo"><a href="#">Leah Meirinhos</a></h1>
+				<p>Learn French effortlessly with my 100% fun, 0% boring method</p>
+			</header>
+			<nav id="nav">
+				<ul>
+					<li><a href="#one" class="active">Learning French</a></li>
+					<li><a href="#two">Benefits</a></li>
+					<li><a href="#three">The tutor</a></li>
+					<li><a href="#four">Testimonials</a></li>
+					<li><a href="#five">Pricing</a></li>
+					<li><a href="#six">Schedule a session</a></li>
+				</ul>
+			</nav>
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+		</section>
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Main -->
+			<div id="main">
+				<!-- One -->
+				<section id="one">
+					<div class="container">
+						<header>
+							<h2>Tired of boring teachers?</h2>
+							<p>Boost your French while having fun with a proven tutor that you will love!</p>
+							<iframe width="640" height="360" src="https://www.youtube.com/embed/rytdjDGujw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</header>
+						<!-- Load Stripe.js on your website. -->
+						<script src="https://js.stripe.com/v3"></script>
+						<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+						<button style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em" id="checkout-button-price_1IYU3YHPKb1NaNQBiRZdnSCd" role="link" type="button">Checkout</button>
+						<div id="error-message"></div>
+						<script>
+							(function () {
+								var stripe = Stripe('pk_test_51HyNDrHPKb1NaNQBrDxAsjkCBGmZNzWWs6m8jc2mhNlvxDCHQcP85rvt5RZ1Yh65Bsfeu9uwy5bYb8tzKUBp2kDP00y0XG990s');
+
+								var checkoutButton = document.getElementById('checkout-button-price_1IYU3YHPKb1NaNQBiRZdnSCd');
+								checkoutButton.addEventListener('click', function () {
+									/*
+									 * When the customer clicks on the button, redirect
+									 * them to Checkout.
+									 */
+									stripe.redirectToCheckout({
+										lineItems: [ { price: 'price_1IYU3YHPKb1NaNQBiRZdnSCd', quantity: 1 } ],
+										mode: 'payment',
+										/*
+										 * Do not rely on the redirect to the successUrl for fulfilling
+										 * purchases, customers may not always reach the success_url after
+										 * a successful payment.
+										 * Instead use one of the strategies described in
+										 * https://stripe.com/docs/payments/checkout/fulfill-orders
+										 */
+										successUrl: 'https://leahmeirinhos.com/thankyou.html',
+										cancelUrl: 'https://leahmeirinhos.com/package10.html',
+									})
+										.then(function (result) {
+											if (result.error) {
+												/*
+												 * If `redirectToCheckout` fails due to a browser or network
+												 * error, display the localized error message to your customer.
+												 */
+												var displayError = document.getElementById('error-message');
+												displayError.textContent = result.error.message;
+											}
+										});
+								});
+							})();
+						</script>
+					</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Leah Meirinhos. All rights reserved.</li>
+					<li>Design: <a href="http://andrecasal.com" target="_blank">André Casal</a></li>
+				</ul>
+			</div>
+		</section>
+		</div>
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
