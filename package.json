@@ -1,0 +1,26 @@
+{
+  "name": "leahmeirinhos.github.io",
+  "version": "1.0.0",
+  "description": "Leah Meirinhos French Tutor",
+  "main": "index.js",
+  "dependencies": {
+    "stripe": "^8.139.0"
+  },
+  "devDependencies": {
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leahmeirinhos/leahmeirinhos.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leahmeirinhos/leahmeirinhos.github.io/issues"
+  },
+  "homepage": "https://github.com/leahmeirinhos/leahmeirinhos.github.io#readme"
+}
