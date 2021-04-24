@@ -257,6 +257,69 @@
 		text-align: right;
 	}
 
+	.quote {
+		font-style: italic;
+		color: #bdbdbd;
+	}
+
+	.satisfaction {
+		display:grid;
+		grid-template-columns: 40% 60%;
+		grid-template-rows: 1fr;
+		grid-template-areas:
+		"image text";
+		column-gap: 40px;
+		padding: 60px 0;
+		margin-bottom: 60px;
+		color:#fff;
+
+		h2 {
+			color:#fff;
+		}
+
+		div:first-child {
+			grid-area:image;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		div:last-child {
+			grid-area:text;
+
+			p {
+				margin-top: 55px;
+			}
+		}
+	}
+
+	.personal-note {
+		display:grid;
+		grid-template-columns: 40% 60%;
+		grid-template-rows: 1fr;
+		grid-template-areas:
+		"image text";
+		column-gap: 40px;
+		padding: 60px 0;
+
+		div:first-child {
+			grid-area:image;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		div:last-child {
+			grid-area:text;
+
+			p {
+				margin-top: 55px;
+			}
+		}
+	}
+
 /* Row */
 
 	.row {
